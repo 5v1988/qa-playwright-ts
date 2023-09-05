@@ -1,6 +1,6 @@
 import { Then, When } from "@cucumber/cucumber";
 import { randomNumber } from "../utils/common.util";
-import { ICustomWorld } from "./util/custom.world";
+import { ICustomWorld } from "./core/custom.world";
 
 When('User navigates to create new customer account', async function (this: ICustomWorld) {
     await this.pageFactory?.landingPage

@@ -1,6 +1,6 @@
 import { Then, When } from "@cucumber/cucumber";
 import { expect } from "@playwright/test";
-import { ICustomWorld } from "./util/custom.world";
+import { ICustomWorld } from "./core/custom.world";
 
 When('User searches for the product: {string}',
     async function (this: ICustomWorld, productName: string) {

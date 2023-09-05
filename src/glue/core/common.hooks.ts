@@ -1,8 +1,11 @@
 import {
     After,
     AfterAll,
+    AfterStep,
     Before,
-    BeforeAll
+    BeforeAll,
+    ITestCaseHookParameter,
+    Status
 } from "@cucumber/cucumber";
 import {
     Browser,
@@ -23,7 +26,12 @@ Before(async function (this: ICustomWorld) {
     this.pageFactory = new PageFactory(this.page);
 });
 
-After(async function (this: ICustomWorld) {
+
+After(async function (this: ICustomWorld, { result }: ITestCaseHookParameter) {
+    if (result?.status !== Status.PASSED) {
+        const image = await this.page?.screenshot({ fullPage: true });
+        image && (this.attach(image, { 'mediaType': 'image/png' }));
+    }
     await this.page?.close()
     await this.context?.close()
 });

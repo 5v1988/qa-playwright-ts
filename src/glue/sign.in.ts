@@ -1,5 +1,5 @@
 import { Then, When } from "@cucumber/cucumber";
-import { ICustomWorld } from "./util/custom.world";
+import { ICustomWorld } from "./core/custom.world";
 
 When('User navigates to sign-in page', async function (this: ICustomWorld) {
     await this.pageFactory?.landingPage

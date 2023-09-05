@@ -1,5 +1,5 @@
 import { When } from "@cucumber/cucumber";
-import { ICustomWorld } from "./util/custom.world";
+import { ICustomWorld } from "./core/custom.world";
 
 When('User adds choosen product to the cart', async function (this: ICustomWorld) {
    await this.pageFactory?.addToCart.addProductToCart();

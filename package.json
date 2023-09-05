@@ -1,10 +1,11 @@
 {
   "name": "qa-playwright-ts",
   "version": "1.0.0",
-  "description": "a boiler plate project for Playwright and CucumberJS using TypeScript",
+  "description": "a boilerplate project for Playwright and CucumberJS using TypeScript",
   "main": "index.js",
   "scripts": {
-    "cucumber": "cucumber-js"
+    "cucumber": "cucumber-js",
+    "report": "open report/cucumber-report.html"
   },
   "author": "Veera",
   "license": "ISC",

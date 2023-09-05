@@ -1,14 +1,17 @@
-const config = {
+module.exports = {
+  default: {
     paths: ['src/features/**/*.feature'],
     require: ['src/glue/**/*.ts'],
     requireModule: ['ts-node/register'],
+    formatOptions: { snippetInterface: 'async-await' },
     format: [
       'summary',
-      'progress-bar',
+      'html:report/cucumber-report.html',
     ],
-    formatOptions: { snippetInterface: 'async-await' },
-  };
-
-module.exports = {
-   default: config
- }
+    dryRun: false,
+    tags: '@All',
+    worldParameters: {
+      
+    }
+  }
+}

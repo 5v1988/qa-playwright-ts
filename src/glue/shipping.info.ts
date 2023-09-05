@@ -1,5 +1,5 @@
 import { DataTable, When } from "@cucumber/cucumber";
-import { ICustomWorld } from "./util/custom.world";
+import { ICustomWorld } from "./core/custom.world";
 
 When('User enters the following personal shipping info:', { timeout: 10000 },
   async function (this: ICustomWorld, dataTable: DataTable) {
