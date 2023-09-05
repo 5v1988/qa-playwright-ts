@@ -32,4 +32,3 @@ import CustomerLogin from '../pages/customer.login';
 })();
 
 
-//console.log(result);
