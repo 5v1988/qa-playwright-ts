@@ -9,9 +9,9 @@ module.exports = {
       'html:report/cucumber-report.html',
     ],
     dryRun: false,
-    tags: '@All',
+    tags: '@SignIn',
     worldParameters: {
-      
+
     }
   }
 }

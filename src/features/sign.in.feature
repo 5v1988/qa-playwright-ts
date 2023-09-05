@@ -1,6 +1,5 @@
 @All @SignIn
 Feature: Sign In scenarios
-
     Scenario Outline: Login using valid creds
         Given User opens home page
         When User navigates to sign-in page
