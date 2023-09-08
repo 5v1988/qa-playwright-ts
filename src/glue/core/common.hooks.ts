@@ -22,7 +22,7 @@ BeforeAll(async function () {
 });
 
 Before({ tags: "@Ignore or @ignore" }, async function (this: ICustomWorld, tcHook: ITestCaseHookParameter) {
-    this.log(`The scenario: <b> ${tcHook.pickle.name} is being skipped`);
+    this.log(`The scenario: <b> ${tcHook.pickle.name} </b> is being skipped`);
     return 'skipped';
 });
 
@@ -34,8 +34,8 @@ Before(async function (this: ICustomWorld) {
 
 AfterStep(async function (this: ICustomWorld, { result }: ITestStepHookParameter) {
     if (result?.status !== Status.PASSED) {
-        const image = await this.page?.screenshot({ fullPage: true });
-        image && (this.attach(image, { 'mediaType': 'image/png' }));
+        const imageBuffer = await this.page?.screenshot({ fullPage: true });
+        imageBuffer && (this.attach(imageBuffer, { 'mediaType': 'image/png' }));
     }
 });
 
