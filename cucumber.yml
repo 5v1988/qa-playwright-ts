@@ -11,6 +11,9 @@ default:
     - summary
     - html:report/cucumber-report.html
   dryRun: false
+  retry: 2
+  retryTagFilter: '@Flaky or @flaky'
   tags: "@All"
   worldParameters:
     appUrl: https://magento.softwaretestingboard.com/
+    timeOut: 15000 

@@ -58,8 +58,8 @@ export default class ShippingAddressPage extends BasePage {
         return this.page.locator("//button[.//span[text()='Next']]");
     }
 
-    async enterPersonalInfo(personalInfo: Record<string, string>) {
-        await this.page.waitForLoadState('domcontentloaded');
+    async enterPersonalInfo(personalInfo: Record<string, string>, timeOut: number = 15000) {
+        await this.page.waitForLoadState('domcontentloaded', { timeout: timeOut });
         if (personalInfo['Email'])
             await this.emailAddress.fill(personalInfo['Email']);
         if (personalInfo['FirstName'])
@@ -70,8 +70,8 @@ export default class ShippingAddressPage extends BasePage {
             await this.company.fill(personalInfo['Company']);
     }
 
-    async enterShippingAddress(shippingAddress: Record<string, string>) {
-        await this.page.waitForLoadState('domcontentloaded');
+    async enterShippingAddress(shippingAddress: Record<string, string>, timeOut: number = 15000) {
+        await this.page.waitForLoadState('domcontentloaded', { timeout: timeOut });
         if (shippingAddress['Street1'])
             await this.streetLines.nth(0).fill(shippingAddress['Street1']);
         if (shippingAddress['City'])

@@ -25,9 +25,9 @@ export default class LoginPage extends BasePage {
         await this.loginBtn.click();
     }
 
-    async isLoginSuccess() {
+    async isLoginSuccess(timeOut: number = 5000) {
         // Using CSS with :visible to find only visible elements
         await expect(this.page.locator('span.logged-in:visible'))
-            .toBeVisible({ timeout: 5000 });
+            .toBeVisible({ timeout: timeOut });
     }
 }

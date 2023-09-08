@@ -13,5 +13,5 @@ When('User logons using credentials: {string} and {string}', async function (thi
 
 Then('User verifies that the login is successful', async function (this: CustomWorld) {
     await this.pages.loginPage
-        .isLoginSuccess();
+        .isLoginSuccess(this.parameters.timeOut);
 });

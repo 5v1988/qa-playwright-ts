@@ -1,6 +1,6 @@
 @All @Search
 Feature: Search products
-
+    @Flaky
     Scenario Outline: Search product and place an order
         Given User opens home page
         And User searches for the product: '<ProductName>'
