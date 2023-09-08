@@ -1,8 +1,7 @@
 import { Given } from "@cucumber/cucumber";
-import { readTestConfig } from "../utils/common.util";
-import { ICustomWorld } from "./core/custom.world";
+import { CustomWorld } from "./core/custom.world";
 
-Given('User opens home page', async function (this: ICustomWorld) {
-    let url: string = await readTestConfig('url')
-    await this.pageFactory?.landingPage.openUrl(url);
+Given('User opens home page', async function (this: CustomWorld) {
+    await this.pages.landingPage
+        .openUrl(this.parameters.appUrl);
 });

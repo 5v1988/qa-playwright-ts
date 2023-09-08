@@ -1,10 +1,10 @@
 import { When } from "@cucumber/cucumber";
-import { ICustomWorld } from "./core/custom.world";
+import { CustomWorld } from "./core/custom.world";
 
-When('User adds choosen product to the cart', async function (this: ICustomWorld) {
-   await this.pageFactory?.addToCart.addProductToCart();
+When('User adds choosen product to the cart', async function (this: CustomWorld) {
+   await this.pages.addToCart.addProductToCart();
 });
 
-When('User proceeds to checkout from the cart', async function (this: ICustomWorld) {
-    await this.pageFactory?.addToCart.proceedCheckout();
+When('User proceeds to checkout from the cart', async function (this: CustomWorld) {
+    await this.pages.addToCart.proceedCheckout();
 });

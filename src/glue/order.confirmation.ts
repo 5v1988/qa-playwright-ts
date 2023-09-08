@@ -1,8 +1,8 @@
 import { Then } from "@cucumber/cucumber";
-import { ICustomWorld } from "./core/custom.world";
+import { CustomWorld } from "./core/custom.world";
 
 Then('User verifies that order confirmation: {string} is displayed',
-    async function (this: ICustomWorld, message: string) {
-        await this.pageFactory?.orderConfirmationPage
+    async function (this: CustomWorld, message: string) {
+        await this.pages.orderConfirmationPage
             .confirmSuccessMsg(message);
     });
