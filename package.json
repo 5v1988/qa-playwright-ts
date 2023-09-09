@@ -4,8 +4,8 @@
   "description": "a boilerplate project for Playwright and CucumberJS using TypeScript",
   "main": "index.js",
   "scripts": {
-    "cucumber": "cucumber-js",
-    "report": "open report/cucumber-report.html"
+    "bdd-tests": "cucumber-js",
+    "open-report": "open report/cucumber-report.html"
   },
   "author": "Veera",
   "license": "ISC",
