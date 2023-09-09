@@ -61,6 +61,10 @@
 
     —  On running these commands, the tests begin the execution and open up the report on completion
 
+
+https://github.com/5v1988/qa-playwright-ts/assets/123231872/e77e1ce2-75f1-4471-a3e3-7f20b6b894cc
+
+
 ## What's next:
 
     - This is a standard boilplate framework and is continuously evolving.
