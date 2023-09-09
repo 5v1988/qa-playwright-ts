@@ -32,7 +32,7 @@ export default class AddToCartPage extends BasePage {
     }
 
     async proceedCheckout(count = '1') {
-        await this.cartCounter.filter({'hasText': count}).click();
+        await this.cartCounter.filter({'hasText': count}).click({timeout: 5000});
         await this.proceedToCheckout.click();
     }
 }
